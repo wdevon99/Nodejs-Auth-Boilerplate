@@ -1,5 +1,5 @@
 # Nodejs-Auth-Boilerplate
-This is a Nodejs Authentication Boilerplate designed by me for the MEAN stack.
+This is a Nodejs Authentication Boilerplate designed for the MEAN stack.
 
 *Anyone is welcome to clone this and use for their own projects*
 
