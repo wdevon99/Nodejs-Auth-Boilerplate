@@ -11,7 +11,6 @@ const config=require("../config/database");
 //to make authenticated routes
 const passport=require("passport");
 
-
 //=========  REGISTER ROUTE  ========= 
 //defining the "/users/register" route
 router.post('/register',(req,res)=>{
@@ -54,7 +53,7 @@ router.post('/login',(req,res)=>{
                 //checking if match is a success
                  if(match){
                     //creating a JSON web toke (JWT)
-                    const token = jwt.sign(user.toJSON(),config.secret , {expiresIn:86400} );
+                    const token = jwt.sign(user.toJSON(), config.secret , {expiresIn:86400} );
                     res.json({
                         state:true,
                         message:"Login Successful",
@@ -79,13 +78,13 @@ router.post('/login',(req,res)=>{
 
 //=========  PROFILE ROUTE  =========
 //this route can be access by a autenticated user
-router.post('/profile',passport.authenticate('jwt', { session:false}),function(req, res) {
-    //res.redirect('/');
-    res.json({
-        user:req.user
-    });
-});
-
+router.post('/profile', passport.authenticate('jwt', { session: false }),
+    function(req, res) {
+        res.json({
+            user:req.user
+        });
+    }
+);
 
 //exporting the router to be able to use it in the app.js or any other file
 module.exports= router;
