@@ -46,6 +46,7 @@ router.post('/login',(req,res)=>{
          if(err) throw err;
          if(!user){
              res.send({state:false,message:"No matching email found"});
+             return false;
          }else{
             //check if passwords are matching
             User.passwordCheck(password,user.password, function (err,match){
@@ -78,7 +79,7 @@ router.post('/login',(req,res)=>{
 
 //=========  PROFILE ROUTE  =========
 //this route can be access by a autenticated user
-router.post('/profile', passport.authenticate('jwt', { session: false }),
+router.get('/profile', passport.authenticate('jwt', { session: false }),
     function(req, res) {
         res.json({
             user:req.user

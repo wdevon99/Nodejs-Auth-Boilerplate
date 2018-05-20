@@ -1,0 +1,24 @@
+<h2>REGISTER</h2>
+<hr>
+
+<form class="form-horizontal" (submit) = "registerData()">
+  <div class="form-group">
+    <label class="col-form-label col-form-label-sm" for="inputSmall">Username</label>
+    <input class="form-control form-control-sm" type="text" placeholder="Username" name="username" [(ngModel)]="username">
+  </div>
+  <div class="form-group">
+    <label class="col-form-label col-form-label-sm" for="inputSmall">Name</label>
+    <input class="form-control form-control-sm" type="text" placeholder="Name"  name="name" [(ngModel)]="name">
+  </div>
+  <div class="form-group"> 
+    <label class="col-form-label col-form-label-sm" for="inputSmall">Email</label>
+    <input class="form-control form-control-sm" type="text" placeholder="Email"  name="email" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+      <label class="col-form-label col-form-label-sm" for="inputSmall">Password</label>
+      <input class="form-control form-control-sm" type="password" placeholder="Password"  name="password" [(ngModel)]="password">
+  </div>
+
+  <button type="reset" class="btn btn-secondary">Cancel</button>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>

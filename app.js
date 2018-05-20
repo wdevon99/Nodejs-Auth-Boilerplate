@@ -3,6 +3,10 @@ const express= require('express');
 //initializing express
 const app= express();
 
+// ===================== TO AVOID CORS ERROR ====================================
+const cors=require('cors');
+app.use(cors());
+
 // ========================= USER AUTHENTICATION ================================
 const passport=require('passport');
 app.use(passport.initialize());
