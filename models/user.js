@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-//use to hash the passwords
 var bcrypt = require('bcryptjs');
 
 //defining the 'user' schema
