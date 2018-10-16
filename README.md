@@ -20,6 +20,6 @@ npm install
 
 **NOTE : You need to have nodejs (npm) and mongo run installed in your computer.**
 
-*Feel free to contact me for any questions or help* : wdevon99@gmail.com
+*Feel free to contact me for any questions or help* : wdevon99@gmail.com :)
 
 
